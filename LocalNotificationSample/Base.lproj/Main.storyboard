@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="klg-vv-gbL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Scene-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalNotificationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzC-kd-mqF">
+                                <rect key="frame" x="214" y="617" width="141" height="30"/>
+                                <state key="normal" title="Show Second Scene"/>
+                                <connections>
+                                    <segue destination="f9k-Lm-H3y" kind="show" id="QrF-cZ-zpm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAR-hi-Dgu">
+                                <rect key="frame" x="98.5" y="318" width="177" height="30"/>
+                                <state key="normal" title="Poke me after 10 seconds"/>
+                                <connections>
+                                    <action selector="didTapReminderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vms-Ak-YN7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YAR-hi-Dgu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JLm-n6-UxZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qzC-kd-mqF" secondAttribute="bottom" constant="20" id="cOh-Ye-KD8"/>
+                            <constraint firstItem="YAR-hi-Dgu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ne3-eh-0C9"/>
+                            <constraint firstAttribute="trailing" secondItem="qzC-kd-mqF" secondAttribute="trailing" constant="20" id="utT-eM-Lcb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="First Scene" id="bmJ-Gq-DiQ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ozz-DD-QOd"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="107"/>
+        </scene>
+        <!--Second Scene-->
+        <scene sceneID="Hao-Gv-B0w">
+            <objects>
+                <viewController id="f9k-Lm-H3y" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yt2-pS-5Sz"/>
+                        <viewControllerLayoutGuide type="bottom" id="axw-YC-3an"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PU3-Z5-y7w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keH-Ek-KdH">
+                                <rect key="frame" x="135.5" y="323" width="103.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="keH-Ek-KdH" firstAttribute="centerY" secondItem="PU3-Z5-y7w" secondAttribute="centerY" id="8kT-cY-nF2"/>
+                            <constraint firstItem="keH-Ek-KdH" firstAttribute="centerX" secondItem="PU3-Z5-y7w" secondAttribute="centerX" id="kU6-Wy-lin"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second Scene" id="otL-yy-jfK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ntf-gO-vt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZnC-fo-zmj">
+            <objects>
+                <navigationController id="klg-vv-gbL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XXN-dy-YqR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RF5-bZ-yWK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sge-XB-Wsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-282" y="108"/>
+        </scene>
+    </scenes>
+</document>
